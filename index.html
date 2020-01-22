@@ -14,7 +14,7 @@
   </head>
 
   <body>
-    <div class="container">
+    <div id="container">
       <div class="summary">
         <h1 class="app-header">Christian Allen</h1>
         <p class="summary-text">Summary of myself</p>
@@ -43,7 +43,28 @@
         </section>
       </div>
       <div class="multiplication-table">
-        <p>Multiplication Table</p>
+        <h2 class="table-header">Multiplication Table</h2>
+        <form>
+          <span class="row-span">
+            <label for="rows">Rows:</label>
+            <input type="text" name="rows" value="" id="rows" />
+          </span>
+          <span class="column-span">
+            <label for="columns">Columns:</label>
+            <input type="text" name="columns" value="" id="columns" />
+          </span>
+          <div id="buttons-container">
+            <button
+              type="submit"
+              class="create-table-btn"
+              onclick="createTable(event)"
+            >
+              Create Table
+            </button>
+          </div>
+        </form>
+
+        <script src="./index.js"></script>
       </div>
     </div>
   </body>

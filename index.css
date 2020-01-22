@@ -127,7 +127,7 @@ table {
 
 /*RESET END*/
 
-.container {
+#container {
   min-width: 100%;
   border: 1px solid black;
 }
@@ -153,6 +153,7 @@ table {
 .three-columns {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  margin-bottom: 5rem;
 }
 .column {
   display: flex;
@@ -160,4 +161,32 @@ table {
   justify-content: center;
   align-items: center;
   border: 1px solid blue;
+}
+.row-span {
+  margin-right: 2rem;
+}
+.column-span {
+  margin-right: 2rem;
+}
+
+.table-header {
+  margin-bottom: 1.6rem;
+  font-size: 1.8rem;
+}
+.multiplication-table {
+  margin: 0 auto;
+  text-align: center;
+}
+.cell {
+  border: 1px solid black;
+  padding: 1rem 2rem;
+  cursor: initial;
+}
+.alert {
+  color: red;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 800;
+  padding: 1rem 0rem;
 }
