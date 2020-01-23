@@ -6,61 +6,79 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="index.css" />
     <link
+      href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap"
+      rel="stylesheet"
+    />
+    <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
 
-    <title>Document</title>
+    <title>Clearlink</title>
   </head>
 
   <body>
     <div id="container">
       <div class="summary">
-        <h1 class="app-header">Christian Allen</h1>
-        <p class="summary-text">Summary of myself</p>
+        <h1 class="app-header">Clearlink</h1>
+        <p class="summary-text">Hi, I'm Christian Allen, a UX-oriented web developer. I have a over a year's worth of web-development experience and I graduated from Lambda School, a 30-week coding bootcamp. I'm thankful for this opportunity to complete your code challenge.</p>
       </div>
       <div class="three-columns">
         <section class="column">
           <i
             class="fa fa-exclamation-circle"
-            style="font-size: 6rem; color: lightblue;"
+            style="font-size: 6rem; color: #3D92C1; margin-bottom:1rem"
           ></i>
-          <h2>What makes you nervous?</h2>
-          <p>answer</p>
+          <h2 class='question-header'>What makes you nervous?</h2 class='question-header'>
+          <p class='answer'>I feel nervous when I don't know something I should. Throughout my experience with coding, there were multiple times where I felt like I should've known something, but didn't. The only way to get rid of that nervous feeling, for me, was to learn those particular subjects and feel confident in them.</p>
         </section>
         <section class="column">
           <i
             class="fa fa-trophy"
-            style="font-size: 6rem; color: lightblue;"
+            style="font-size: 6rem; color: #3D92C1; margin-bottom:1rem"
           ></i>
-          <h2>What has been your greatest moment as a developer?</h2>
-          <p>answer</p>
+          <h2 class='question-header'>What has been your greatest moment as a developer?</h2>
+          <p class='answer'>My greatest moment as a developer was creating <a href="https://projectfirefly.netlify.com/" style='text-decoration:none; color: blue;'>Project Firefly</a> with other developers and UX designers. We were able to create a web application that can potentially become a funded company. <br> It's my greatest moment because I didn't know how we were going to complete the application in such a short time, but we did. Proving myself wrong helped make this my greatest coding achievement so far.</p>
+          
         </section>
         <section class="column">
-          <i class="fa fa-star" style="font-size: 6rem; color: lightblue;"></i>
-          <h2>What is your favorite thing from pop culture?</h2>
-          <p>answer</p>
+          <i class="fa fa-star" style="font-size: 6rem; color: #3D92C1; margin-bottom:1rem"></i>
+          <h2 class='question-header'>What is your favorite thing from pop culture?</h2>
+          <p class='answer'>Any movie made by Christopher Nolan, especially Interstellar. I'm also a big sports fan, particularly soccer, basketball, and tennis.</p>
         </section>
       </div>
-      <div class="multiplication-table">
+      <div class="multiplication-table-html">
         <h2 class="table-header">Multiplication Table</h2>
         <form>
-          <span class="row-span">
-            <label for="rows">Rows:</label>
-            <input type="text" name="rows" value="" id="rows" />
-          </span>
-          <span class="column-span">
-            <label for="columns">Columns:</label>
-            <input type="text" name="columns" value="" id="columns" />
-          </span>
-          <div id="buttons-container">
-            <button
-              type="submit"
-              class="create-table-btn"
-              onclick="createTable(event)"
-            >
-              Create Table
-            </button>
+          <div class="input-buttons-container">
+            <div class="input-container">
+              <span class="row-span">
+                <label for="rows" class='row-label'>Rows:</label>
+                <input type="text" name="rows" value="" id="rows" />
+              </span>
+              <span class="column-span">
+                <label for="columns" class='column-label'>Columns:</label>
+                <input type="text" name="columns" value="" id="columns" />
+              </span>
+            </div>
+            <div class="buttons-container">
+              <button
+                type="submit"
+                class="create-btn"
+                onclick="createTable(event)"
+                id="create-btn"
+              >
+                Create Table
+              </button>
+              <button
+                type="reset"
+                id="reset-btn"
+                onclick="resetTable(event)"
+                class="delete-btn"
+              >
+                Reset
+              </button>
+            </div>
           </div>
         </form>
 

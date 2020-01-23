@@ -87,6 +87,7 @@ video {
   box-sizing: border-box;
   font: inherit;
   vertical-align: baseline;
+  font-family: "Ubuntu", sans-serif;
 }
 /* HTML5 display-role reset for older browsers */
 article,
@@ -127,29 +128,34 @@ table {
 
 /*RESET END*/
 
+/*SUMMARY*/
 #container {
   min-width: 100%;
-  border: 1px solid black;
 }
 .app-header {
   text-align: center;
   font-size: 2.4rem;
   font-weight: 700;
-  margin: 1rem 0rem 5rem 0rem;
+  padding: 1rem 0rem 5rem 0rem;
   color: rgb(224, 224, 224);
 }
 .summary {
-  border: 1px solid red;
   text-align: center;
   margin-bottom: 2rem;
   background-image: url("https://hookagency.com/wp-content/uploads/2015/11/light-blue-gradient-ui-gradient.jpg");
+  box-shadow: 0px 5px 5px grey;
 }
 .summary-text {
   min-height: 250px;
   font-size: 1.6rem;
   color: rgb(224, 224, 224);
   letter-spacing: 1.3px;
+  width: 70%;
+  margin: 0 auto;
+  line-height: 2.4rem;
 }
+
+/*Q&A*/
 .three-columns {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -158,10 +164,29 @@ table {
 .column {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  border: 1px solid blue;
+  width: 90%;
+  margin: 0 auto;
+  padding: 1rem 1.5rem;
+  box-shadow: 0px 10px 6px rgb(204, 204, 204);
 }
+.column:hover {
+  transform: scale(1.02);
+  transition: ease-in-out 0.35s;
+}
+.question-header {
+  font-weight: 800;
+  font-size: 1.2rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.answer {
+  text-align: center;
+  line-height: 1.5rem;
+}
+
+/*JS TABLE*/
 .row-span {
   margin-right: 2rem;
 }
@@ -173,20 +198,136 @@ table {
   margin-bottom: 1.6rem;
   font-size: 1.8rem;
 }
-.multiplication-table {
-  margin: 0 auto;
+.multiplication-table-html {
+  margin: 2rem auto;
   text-align: center;
+}
+.multiplication-table-js {
+  text-align: center;
+  margin: 0 auto 5rem;
 }
 .cell {
   border: 1px solid black;
   padding: 1rem 2rem;
   cursor: initial;
 }
+td:hover {
+  color: red;
+  cursor: auto;
+}
+
 .alert {
   color: red;
   text-transform: uppercase;
   text-align: center;
   font-size: 1.5rem;
   font-weight: 800;
-  padding: 1rem 0rem;
+  padding-bottom: 1rem;
+}
+.buttons-container {
+  margin: 1rem;
+}
+
+.create-btn {
+  font-size: 1rem;
+  color: white;
+  background-color: green;
+  padding: 0.5rem 1rem;
+  margin-right: 2rem;
+  border-radius: 5px;
+}
+.create-btn:hover {
+  background-color: rgb(1, 151, 1);
+}
+.create-btn:focus {
+  outline: 0;
+}
+
+.delete-btn {
+  font-size: 1rem;
+  color: white;
+  background-color: rgb(224, 3, 3);
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+}
+.delete-btn:hover {
+  background-color: rgb(255, 0, 0);
+}
+.delete-btn:focus {
+  outline: 0;
+}
+
+.input-buttons-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.multiplication-row {
+  margin: 1rem;
+}
+
+/*MOBILE STYLING*/
+@media (max-width: 600px) {
+  .app-header {
+    padding: 1rem 0rem 1rem 0rem;
+  }
+
+  .summary-text {
+    font-size: 1rem;
+    color: rgb(224, 224, 224);
+    letter-spacing: 1.3px;
+    width: 85%;
+    margin: 0 auto;
+    line-height: 2.4rem;
+  }
+  .three-columns {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem auto;
+    padding: 1rem 1rem;
+  }
+  .column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 98%;
+    margin: 1rem auto;
+    padding: 1rem 1.5rem;
+    box-shadow: 0px 10px 6px rgb(204, 204, 204);
+  }
+  .input-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .row-span {
+    display: flex;
+    justify-content: space-between;
+  }
+  .column-span {
+    display: flex;
+    justify-content: space-between;
+  }
+  .row-label {
+    margin-right: 1rem;
+  }
+  .column-label {
+    margin-right: 1rem;
+  }
+  .buttons-container {
+    margin: 0rem;
+  }
+  .create-btn {
+    margin-right: 0.5rem;
+  }
+  .cell {
+    padding: 0.3rem 0.2rem;
+  }
+  .multiplication-table-js {
+    margin: 0 auto 2rem;
+  }
+  .alert {
+    font-size: 1rem;
+    padding: 0 1rem 1rem;
+  }
 }
